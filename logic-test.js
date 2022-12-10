@@ -38,3 +38,21 @@ const findDuplicate = (numbers) => {
 
 const result = [...new Set(findDuplicate(arrNumbers))];
 console.log(result);
+
+// d. Convert to object code
+let arrayCode = ["1.", "1.1.", "1.2.", "1.3.", "1.4.", "1.1.1.", "1.1.2.", "1.1.3.", "1.2.1.", "1.2.2.", "1.3.1.", "1.3.2.", "1.3.3.", "1.3.4.", "1.4.1.", "1.4.3."];
+
+let objectCode = {};
+
+arrayCode.map(element => {
+  let code = element.split('.')
+  if (!objectCode[code[0]] && !objectCode[code[3]]) {
+    objectCode[code[0]] = {};
+  }
+  if (!objectCode[code[0]][code[1]]) {
+    objectCode[code[0]][code[1]] = {};
+  }
+  objectCode[code[0]][code[1]][code[2]] = element;
+});
+
+console.log(objectCode)
