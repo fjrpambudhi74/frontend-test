@@ -38,13 +38,15 @@ body {
 .login-box {
   width: 35%;
   padding: 0 5px;
+  position: relative;
 
-  &--link {
-    display: flex;
-    justify-content: center;
+  .login-box-logo {
+    width: 100%;
+    text-align: center;
+    margin-left: 15px;
   }
 
-  &--logo {
+  &--image {
     width: 8em;
   }
 

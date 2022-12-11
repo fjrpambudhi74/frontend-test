@@ -3,18 +3,20 @@
     <div class="login-container">
       <div class="login-content">
         <div class="login-box">
-          <a
-            href="https://enterprise.mile.app/"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="login-box--link"
-          >
-            <img
-              src="../assets/images/logo-milesapp.png"
-              alt=""
-              class="login-box--logo"
-            />
-          </a>
+          <div class="login-box-logo">
+            <a
+              href="https://enterprise.mile.app/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                src="../assets/images/logo-milesapp.png"
+                alt=""
+                class="login-box--image"
+              />
+            </a>
+          </div>
+
           <div class="login-box-card">
             <h1 class="login-box-card--title">Login</h1>
             <base-input-text
