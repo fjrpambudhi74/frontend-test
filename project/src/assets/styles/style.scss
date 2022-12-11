@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+$gray-1: #455a64;
+$gray-2: #c6c6c6;
+$blue-1: #02a8f3;
+$blue-2: #409eff;
+$red-1: #e57373;
+$white-1: #fff;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: $gray-1;
+}
