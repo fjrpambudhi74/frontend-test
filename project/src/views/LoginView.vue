@@ -34,7 +34,7 @@
               placeholder="Input your email or username"
               :errorText="dataError.username"
               width="90"
-              :disabled="true"
+              :disabled="isDisabled"
             />
             <base-input-text
               name="input-password"
@@ -44,7 +44,7 @@
               placeholder="Input your password"
               :errorText="dataError.password"
               width="90"
-              :disabled="true"
+              :disabled="isDisabled"
             />
             <button
               class="login-button"
