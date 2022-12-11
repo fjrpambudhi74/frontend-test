@@ -46,6 +46,12 @@
               width="90"
               :disabled="true"
             />
+            <button
+              class="login-button"
+              :class="[isDisabled ? 'login-button--disabled' : '']"
+            >
+              Login
+            </button>
           </div>
         </div>
         <div class="login-bg">
@@ -74,6 +80,7 @@ export default {
         organization: "",
       },
       dataError: {},
+      isDisabled: true,
     };
   },
 };

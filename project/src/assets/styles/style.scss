@@ -63,6 +63,36 @@ body {
       margin-bottom: 1.1em;
     }
   }
+
+  .login-button {
+    margin: 1em 0;
+    min-width: 130px;
+    border-radius: 4px;
+    border: 0px solid transparent;
+    font-size: 14px;
+    text-align: center;
+    background-color: $blue-2;
+    color: $white-1;
+    font-weight: 600;
+    line-height: 1;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.1s all ease-in-out;
+
+    &:hover {
+      color: #fff;
+      background-color: #a0cfff;
+      border-color: #a0cfff;
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+      color: #fff;
+      background-color: #a0cfff;
+      border-color: #a0cfff;
+    }
+  }
+
 }
 
 .form-input {
