@@ -17,6 +17,33 @@
           </a>
           <div class="login-box-card">
             <h1 class="login-box-card--title">Login</h1>
+            <base-input-text
+              name="input-organization"
+              label="Organization Name"
+              v-model="form.organization"
+              placeholder="Input organization name"
+              :errorText="dataError.organization"
+              width="90"
+            />
+            <base-input-text
+              name="input-username"
+              label="Email or Username"
+              v-model="form.username"
+              placeholder="Input your email or username"
+              :errorText="dataError.username"
+              width="90"
+              :disabled="true"
+            />
+            <base-input-text
+              name="input-password"
+              label="Password"
+              type="password"
+              v-model="form.password"
+              placeholder="Input your password"
+              :errorText="dataError.password"
+              width="90"
+              :disabled="true"
+            />
           </div>
         </div>
         <div class="login-bg">
@@ -32,7 +59,20 @@
 </template>
 
 <script>
+import BaseInputText from "@/components/BaseInputText";
+
 export default {
   name: "LoginView",
+  components: {
+    BaseInputText,
+  },
+  data() {
+    return {
+      form: {
+        organization: "",
+      },
+      dataError: {},
+    };
+  },
 };
 </script>
