@@ -2,6 +2,7 @@
 
 $gray-1: #455a64;
 $gray-2: #c6c6c6;
+$gray-3: #eee;
 $blue-1: #02a8f3;
 $blue-2: #409eff;
 $red-1: #e57373;
@@ -19,3 +20,71 @@ body {
   font-family: 'Nunito', sans-serif;
   color: $gray-1;
 }
+
+.login-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2em 0 1em;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.login-box {
+  width: 33%;
+  padding: 0 5px;
+
+  &--link {
+    display: flex;
+    justify-content: center;
+  }
+
+  &--logo {
+    width: 8em;
+  }
+
+  .login-box-card {
+    position: relative;
+    margin: 1em auto 0;
+    padding: 1em;
+    border: 1px solid $gray-3;
+    border-radius: 5px;
+    text-align: center;
+
+    &--title {
+      color: $blue-1;
+    }
+  }
+}
+
+.login-bg {
+  position: relative;
+}
+
+.login-bg img {
+  width: 80%;
+}
+
+.login-footer {
+  position: fixed;
+  bottom: 2em;
+  // left: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .login {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/bg-1.png"),linear-gradient(180deg,rgba(2,168,243,.06),rgba(2,168,243,0));
+    background-repeat: no-repeat;
+    background-position: 100%;
+  }
+}
+
+
+
