@@ -1,8 +1,9 @@
 <template>
-  <div class="map">
-    <h1>This is an map page</h1>
-    <GmapAutocomplete @place_changed="setPlace" />
-    <button @click="addMarker">Add</button>
+  <div class="map-container">
+    <div class="map-search">
+      <h3>Map</h3>
+      <GmapAutocomplete @place_changed="setPlace" class="map-search--input" />
+    </div>
     <GmapMap :center="center" :zoom="12" style="width: 100%; height: 400px">
       <GmapMarker
         :key="index"
@@ -30,8 +31,6 @@ export default {
   methods: {
     setPlace(place) {
       this.currentPlace = place;
-    },
-    addMarker() {
       if (this.currentPlace) {
         const marker = {
           lat: this.currentPlace.geometry.location.lat(),
