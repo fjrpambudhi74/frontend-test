@@ -53,7 +53,8 @@
               :class="[isDisabled ? 'login-button--disabled' : '']"
               @click="submitForm"
             >
-              Login
+              <div class="loader" v-if="isLoading"></div>
+              <div class="m-r--auto m-l--auto" v-else>Login</div>
             </button>
             <p>
               Not registered yet?
@@ -107,6 +108,7 @@ export default {
       },
       dataError: {},
       isDisabled: true,
+      isLoading: false,
       verifyOrganization: false,
     };
   },
@@ -114,6 +116,7 @@ export default {
     "formLogin.organization": function (val) {
       if (val.length > 2) {
         this.verifyOrganization = true;
+        // should be api call
         setTimeout(() => {
           this.verifyOrganization = false;
           this.isDisabled = false;
@@ -126,8 +129,13 @@ export default {
       this.$router.push({ name: "map" });
     },
     submitForm() {
+      this.isLoading = true;
       if (!this.isFormValid()) return;
-      this.goToPage();
+      // should be api call
+      setTimeout(() => {
+        this.isLoading = false;
+        this.goToPage();
+      }, 2000);
     },
     isFormValid() {
       let result = true;
