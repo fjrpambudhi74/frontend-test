@@ -200,24 +200,20 @@ body {
   justify-content: space-between;
   margin-bottom: 0.5em;
 
+  &--input {
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    color: #606266;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    }
 }
-
-.map-input {
-  background: #fff;
-  box-sizing: border-box;
-  border: 1px solid #dcdfe6;
-  border-radius: 4px;
-  color: #606266;
-  font-size: inherit;
-  height: 40px;
-  line-height: 40px;
-  outline: 0;
-  padding: 0 15px;
-  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
-
-}
-
-
 
 
 @media (min-width: 992px) {
