@@ -93,6 +93,11 @@ body {
     }
   }
 
+  .login-contact a {
+    text-decoration: none;
+    color: $blue-1;
+  }
+
 }
 
 .form-input {
@@ -179,7 +184,8 @@ body {
 
 .login-footer {
   position: fixed;
-  bottom: 2em;
+  bottom: 1em;
+  color: $gray-2;
   // left: 50%;
   margin: 0 auto;
   text-align: center;

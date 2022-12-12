@@ -21,9 +21,9 @@
             <h1 class="login-box-card--title">Login</h1>
             <base-input-text
               name="input-organization"
-              label="Organization Name"
+              label="Organization"
               v-model="form.organization"
-              placeholder="Input organization name"
+              placeholder="Enter organization name"
               :errorText="dataError.organization"
               width="90"
             />
@@ -31,7 +31,7 @@
               name="input-username"
               label="Email or Username"
               v-model="form.username"
-              placeholder="Input your email or username"
+              placeholder="Enter your email or username"
               :errorText="dataError.username"
               width="90"
               :disabled="isDisabled"
@@ -41,7 +41,7 @@
               label="Password"
               type="password"
               v-model="form.password"
-              placeholder="Input your password"
+              placeholder="Enter your password"
               :errorText="dataError.password"
               width="90"
               :disabled="isDisabled"
@@ -52,6 +52,11 @@
             >
               Login
             </button>
+            <p>
+              Not registered yet?
+              <span class="login-contact"><a href="">Contact Us</a></span> for
+              more info
+            </p>
           </div>
         </div>
         <div class="login-bg">
