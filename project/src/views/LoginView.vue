@@ -22,8 +22,8 @@
             <base-input-text
               name="input-organization"
               label="Organization"
-              v-model="form.organization"
-              :modelValue="form.organization"
+              v-model="formLogin.organization"
+              :modelValue="formLogin.organization"
               placeholder="Enter organization name"
               :errorText="dataError.organization"
               width="90"
@@ -32,7 +32,7 @@
             <base-input-text
               name="input-username"
               label="Email or Username"
-              v-model="form.username"
+              v-model="formLogin.username"
               placeholder="Enter your email or username"
               :errorText="dataError.username"
               width="90"
@@ -42,7 +42,7 @@
               name="input-password"
               label="Password"
               type="password"
-              v-model="form.password"
+              v-model="formLogin.password"
               placeholder="Enter your password"
               :errorText="dataError.password"
               width="90"
@@ -51,7 +51,7 @@
             <button
               class="login-button"
               :class="[isDisabled ? 'login-button--disabled' : '']"
-              @click="goToPage"
+              @click="submitForm"
             >
               Login
             </button>
@@ -100,7 +100,7 @@ export default {
   },
   data() {
     return {
-      form: {
+      formLogin: {
         organization: "",
         username: "",
         password: "",
@@ -111,21 +111,44 @@ export default {
     };
   },
   watch: {
-    "form.organization": function (val) {
+    "formLogin.organization": function (val) {
       if (val.length > 2) {
         this.verifyOrganization = true;
         setTimeout(() => {
           this.verifyOrganization = false;
-        }, 2000);
-        if (this.verifyOrganization == false) {
           this.isDisabled = false;
-        }
+        }, 500);
       }
     },
   },
   methods: {
     goToPage() {
       this.$router.push({ name: "map" });
+    },
+    submitForm() {
+      if (!this.isFormValid()) return;
+      this.goToPage();
+    },
+    isFormValid() {
+      let result = true;
+      this.dataError = {};
+
+      const { username, password } = this.formLogin;
+
+      if (!username) {
+        this.dataError.username = "Username atau email wajib diisi";
+        result = false;
+      }
+
+      if (!password) {
+        this.dataError.password = "Password wajib diisi";
+        result = false;
+      } else if (password.length <= 6) {
+        this.dataError.password = "Password tidak boleh kurang dari 6 karakter";
+        result = false;
+      }
+
+      return result;
     },
   },
 };
