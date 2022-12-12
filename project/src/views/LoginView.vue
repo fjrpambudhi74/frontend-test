@@ -50,6 +50,7 @@
             <button
               class="login-button"
               :class="[isDisabled ? 'login-button--disabled' : '']"
+              @click="goToPage"
             >
               Login
             </button>
@@ -98,7 +99,7 @@ export default {
   },
   methods: {
     goToPage() {
-      this.$router.push({ name: "map-view" });
+      this.$router.push({ name: "map" });
     },
   },
 };
