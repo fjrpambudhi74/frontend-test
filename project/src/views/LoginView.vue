@@ -23,6 +23,7 @@
               name="input-organization"
               label="Organization"
               v-model="form.organization"
+              :modelValue="form.organization"
               placeholder="Enter organization name"
               :errorText="dataError.organization"
               width="90"
@@ -83,10 +84,22 @@ export default {
     return {
       form: {
         organization: "",
+        username: "",
+        password: "",
       },
       dataError: {},
       isDisabled: true,
     };
+  },
+  watch: {
+    "form.organization": function (val) {
+      if (val.length > 0) this.isDisabled = false;
+    },
+  },
+  methods: {
+    goToPage() {
+      this.$router.push({ name: "map-view" });
+    },
   },
 };
 </script>
