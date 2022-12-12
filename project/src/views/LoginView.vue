@@ -27,6 +27,7 @@
               placeholder="Enter organization name"
               :errorText="dataError.organization"
               width="90"
+              :isLoading="verifyOrganization"
             />
             <base-input-text
               name="input-username"
@@ -106,11 +107,20 @@ export default {
       },
       dataError: {},
       isDisabled: true,
+      verifyOrganization: false,
     };
   },
   watch: {
     "form.organization": function (val) {
-      if (val.length > 0) this.isDisabled = false;
+      if (val.length > 2) {
+        this.verifyOrganization = true;
+        setTimeout(() => {
+          this.verifyOrganization = false;
+        }, 2000);
+        if (this.verifyOrganization == false) {
+          this.isDisabled = false;
+        }
+      }
     },
   },
   methods: {
