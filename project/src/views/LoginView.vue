@@ -56,8 +56,15 @@
             </button>
             <p>
               Not registered yet?
-              <span class="login-contact"><a href="">Contact Us</a></span> for
-              more info
+              <span class="login-contact"
+                ><a
+                  href="https://mile.app/talk-to-sales"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Contact Us</a
+                ></span
+              >
+              for more info
             </p>
           </div>
         </div>
