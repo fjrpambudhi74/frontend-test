@@ -120,7 +120,7 @@ export default {
         setTimeout(() => {
           this.verifyOrganization = false;
           this.isDisabled = false;
-        }, 500);
+        }, 1000);
       }
     },
   },
@@ -130,12 +130,17 @@ export default {
     },
     submitForm() {
       this.isLoading = true;
-      if (!this.isFormValid()) return;
-      // should be api call
-      setTimeout(() => {
+      if (!this.isFormValid()) {
         this.isLoading = false;
-        this.goToPage();
-      }, 2000);
+        return;
+      }
+      // should be api call
+      else {
+        setTimeout(() => {
+          this.isLoading = false;
+          this.goToPage();
+        }, 1000);
+      }
     },
     isFormValid() {
       let result = true;
@@ -144,15 +149,15 @@ export default {
       const { username, password } = this.formLogin;
 
       if (!username) {
-        this.dataError.username = "Username atau email wajib diisi";
+        this.dataError.username = "Email or username must be filled";
         result = false;
       }
 
       if (!password) {
-        this.dataError.password = "Password wajib diisi";
+        this.dataError.password = "Password must be filled";
         result = false;
       } else if (password.length <= 6) {
-        this.dataError.password = "Password tidak boleh kurang dari 6 karakter";
+        this.dataError.password = "Password must be at least 6 characters";
         result = false;
       }
 
