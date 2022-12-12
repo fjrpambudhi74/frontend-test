@@ -58,13 +58,22 @@
               Not registered yet?
               <span class="login-contact"
                 ><a
+                  href="https://mile.app/signup"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Register now</a
+                ></span
+              >
+              <br />
+              or for more info
+              <span class="login-contact"
+                ><a
                   href="https://mile.app/talk-to-sales"
                   target="_blank"
                   rel="noreferrer noopener"
-                  >Contact Us</a
+                  >Contact us</a
                 ></span
               >
-              for more info
             </p>
           </div>
         </div>
