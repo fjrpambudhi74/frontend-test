@@ -12,11 +12,13 @@ const routes = [
     path: "/",
     name: "login",
     component: LoginView,
+    meta: { title: "Login" },
   },
   {
     path: "/map",
     name: "map",
     component: MapView,
+    meta: { title: "Map" },
   },
 ];
 
