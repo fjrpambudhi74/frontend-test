@@ -11,9 +11,9 @@
       :name="name"
       :min="min"
       :max="max"
-      :value="modelValue"
+      :value="value"
       :placeholder="placeholder"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="$emit('input', $event.target.value)"
     />
     <div
       v-if="isLoading"
@@ -49,7 +49,7 @@ export default {
       default: false,
       type: Boolean,
     },
-    modelValue: {
+    value: {
       type: [String, Number],
       default: null,
     },
@@ -75,8 +75,6 @@ export default {
       type: Boolean,
     },
   },
-
-  emits: ["update:modelValue"],
   data() {
     return {};
   },
