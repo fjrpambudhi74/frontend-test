@@ -104,12 +104,12 @@ export default {
 }
 .icon-container {
   position: absolute;
-  right: 40px;
-  top: calc(50% - 15px);
+  right: 60px;
+  margin-top: 40px;
 }
 
 .adjustment-position {
-  top: calc(50% - 25px) !important;
+  // top: calc(50% - 25px) !important;
 }
 .icon-loader {
   position: relative;
@@ -136,8 +136,8 @@ export default {
   display: inline-block;
   width: 100%;
   height: 100%;
-  border-width: 2px;
-  border-color: #505154 #505154 transparent transparent;
+  border-width: 1px;
+  border-color: #02a8f3 #02a8f3 transparent transparent;
   border-style: solid;
   border-radius: 20px;
   box-sizing: border-box;
