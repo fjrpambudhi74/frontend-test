@@ -81,12 +81,11 @@
         </div>
         <div class="login-bg">
           <img src="../assets/images/bg-2.png" alt="" />
-          <div class="login-footer">
-            &copy; Copyright 2021 PT. Paket Informasi Digital. All Rights
-            Reserved
-          </div>
         </div>
       </div>
+    </div>
+    <div class="login-footer">
+      &copy; Copyright 2021 PT. Paket Informasi Digital. All Rights Reserved
     </div>
   </div>
 </template>
