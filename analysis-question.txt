@@ -1,0 +1,52 @@
+1.
+
+With the skills and experience I have, of course, I am more confident and experienced in using Vue JS, but right now I am also learning and honing my skills using React JS because I see that React JS is currently in very high demand and the majority of companies Many technologies use React JS.
+
+But in comparison, in my opinion, Vue JS is easier to learn because writing code is more structured because Vue JS is a framework. And for React JS in my opinion it is more complex but more customable because React JS is a library where we are free to determine what architecture we want to design in a project and it is more customable, then the syntax in react is more similar to pure javascript in general, the conclusion for the future I prefer React JS.
+
+
+
+2.
+
+- When I was asked to upgrade the version from Vue2 to Vue3 in the e-faktur project, where the codebase application is quite large and the business process is quite complex, I have to make sure to be careful with the upgrade so that all existing features must run smoothly and there were no bugs, and I managed to complete it within 1.5 months, and it was ensured that all features ran smoothly without any bugs by doing a regression test by QA.
+
+- The second was when I refactored the folder structure architecture to a modular architecture because the code and files were quite complex I also had to make sure all the folders, files, routing, and code ran smoothly, and was successfully completed within 2 weeks.
+
+
+
+3.
+
+A UI developer, or user interface developer, is responsible for designing and implementing the visual elements of a web or mobile application. This includes the layout, colors, fonts, and other visual elements that users interact with when they use the application.
+
+In order to do this effectively, it is important for a UI developer to have a good understanding of user experience (UX) design principles. This is because the goal of UI development is to create an interface that is not only visually appealing, but also intuitive and easy to use for the user.
+
+
+By understanding UX design principles, a UI developer can create interfaces that are designed with the user in mind. This means considering things like the user's goals, their cognitive abilities, and the context in which they will be using the application. By taking these factors into account, a UI developer can create interfaces that are both visually appealing and user-friendly.
+
+Additionally, by understanding UX design principles, a UI developer can work closely with UX designers and other members of the development team to ensure that the interface is consistent with the overall design of the application. This collaboration can lead to a more cohesive and effective user experience for the end user.
+
+
+Overall, a good understanding of UX design is essential for any UI developer who wants to create effective and user-friendly interfaces.
+
+
+4.
+
+- In the header "Call Us Now: +62 812-1133-5608" the dropdown UI doesn't look good, for Call us now it's better to take it out because there is already a redirect link "Call us". and for the change language dropdown also I don't think it's necessary.
+
+- The image quality  is not HD and looks broken
+
+- The footer on the login view is not symmetrical.
+
+- I think need to add a redirect link to register or sign up on the words "Not Register Yet"
+
+- I think by UX the input organization name function to check the available data by way of UX, is not good, because after the user enters the data, the user has to press enter or the cursor is clicked outside the input, when the user types the function check data through the API it can be done or in Vue it can be tracked with " Watcher and trigger functions check data via API
+
+- Input validation when error is better on left alignment
+
+- The padding-bottom on the container is too tight and needs to be added padding-bottom.
+
+- It is better if the "Login" button is given a loader so that the user knows the login process is being executed
+
+
+
+
